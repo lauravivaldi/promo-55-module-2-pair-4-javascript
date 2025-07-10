@@ -76,3 +76,80 @@ function findNumber() {
 
 const buttonNumber = document.querySelector(".button-number");
 buttonNumber.onclick = findNumber;
+
+//Ejercicios tipos de datos
+
+//Ejercio 1
+
+const numLaura = 25;
+const numBelen = 9;
+
+const sum = numBelen + numLaura;
+console.log (sum);
+
+//Ejercicio 2
+
+
+const superWave = document.querySelector('.super-wave');
+superWave.classList.add(".wave-text");
+console.log("superWave", superWave);
+
+//Ejercicio 3
+
+const kiwisprice = 5;
+const kiwiKilos = 2;
+const perasPrice = 2;
+const perasKilos = 3;
+const grapesPrice = 4;
+const grapesKilos = 0.5;
+
+const kiwiTotal = kiwisprice * kiwiKilos;
+console.log(kiwiTotal);
+
+const perasTotal = perasPrice * perasKilos;
+console.log(perasTotal);
+
+const grapesTotal = grapesPrice * grapesKilos;
+console.log(grapesTotal);
+
+const frutTotalList = kiwiTotal + perasTotal + grapesTotal;
+console.log(frutTotalList);
+
+//Ejercicio 4
+
+const age = 60;
+const yearhours = ( 24 * 365);
+const hourslived = (yearhours * age);
+console.log(hourslived);
+
+
+//Ejercicio 5
+
+
+const firstDogImage = 
+  'https://images.dog.ceo/breeds/schipperke/n02104365_8156.jpg';
+const firstDogName = 'Dina';
+
+const secondDogImage =
+  'https://images.dog.ceo/breeds/collie-border/n02106166_355.jpg';
+const secondDogName = 'Luna';
+
+const thirdDogImage =
+  'https://images.dog.ceo/breeds/affenpinscher/n02110627_7065.jpg';
+const thirdDogName = 'Lana';
+
+const firstDog = document.createElement('li');
+const imageDina = document.createElement('img');
+imageDina.src = 'https://images.dog.ceo/breeds/schipperke/n02104365_8156.jpg';
+firstDog.appendChild(imageDina);
+
+
+document.querySelector(".dog-list").innerHTML = `${firstDog} ${firstDogName}`;
+
+//Ejercicio 6
+
+const lauraCaracters = "Laura Murray Alvarez";
+console.log(lauraCaracters.length);
+//Cuenta los espacios//
+
+document.querySelector(".name-caracters").innerHTML = `El nombre de mi compañera es ${lauraCaracters}, y está compuesto por ${lauraCaracters.length} caracteres`;

@@ -1,0 +1,12 @@
+.main {
+  background-color: pink;
+}
+
+.main__title {
+  color: red;
+}
+
+.wave-text{
+    color: blue;
+    font-weight: bold;
+}
