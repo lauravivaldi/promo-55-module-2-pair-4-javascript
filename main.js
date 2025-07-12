@@ -153,3 +153,96 @@ console.log(lauraCaracters.length);
 //Cuenta los espacios//
 
 document.querySelector(".name-caracters").innerHTML = `El nombre de mi compañera es ${lauraCaracters}, y está compuesto por ${lauraCaracters.length} caracteres`;
+
+//Ejercicio 1 funciones
+
+function multi (a, b) {
+    return a * b;
+};
+
+let resultMulti = multi(8, 4);
+console.log(resultMulti);
+
+resultMulti = multi(3, 9);
+console.log(resultMulti);
+
+function mediaNumber (a, b, c, d) {
+    return (a + b + c + d) / 4;
+};
+
+let resultMedia = mediaNumber(3, 7, 9, 14);
+console.log(resultMedia);
+
+resultMedia = mediaNumber(8, 14, 23, 4);
+console.log(resultMedia);
+
+function isEvenOdd (number) {
+    if (number % 2 === 0) {
+        console.log("Este número es PAR");
+    }
+    else {
+        console.log("Este número es IMPAR");
+    }
+    return number % 2 === 0;
+};
+
+console.log(isEvenOdd(4));
+console.log(isEvenOdd(9));
+console.log(isEvenOdd(17));
+console.log(isEvenOdd(42));
+console.log(isEvenOdd(35));
+
+//Ejercicio 2 funciones
+
+// Crea una función que reciba por parámetro un número, que representará un precio, 
+// y devuelva un texto en el que ponga el precio sin IVA, el IVA (21%) y el total. 
+// "Precio sin IVA: 10, IVA: 2,1 y Total: 12,1".
+// Para probar que funciona, ejecuta la función recogiendo 
+// el resultado en una variable e imprímela en la consola para comprobarlo.
+
+const totalPrice = (number) => {
+    const iva = (number * 21) / 100;
+    const total = number + iva;
+    return `Precio sin IVA: ${number}, IVA: ${iva} y Total: ${total}`;
+};
+
+let resultIVA = totalPrice(10);
+console.log(resultIVA);
+
+resultIVA = totalPrice(25);
+console.log(resultIVA);
+
+//Ejercicio 3 funciones
+
+let secretLetter = 'y';
+function mySecretLetter() {
+  secretLetter = 'x';
+  return secretLetter;
+}
+console.log(secretLetter); 
+console.log(mySecretLetter());
+
+//Ejercicio extra query selector
+
+const getEl = (selector) => {
+    const htmlElement = document.querySelector(selector);
+    if (htmlElement === null) {
+        console.log(`No existe ningún elemento con clase, id o tag llamado ${selector}`);
+    } 
+    else {
+        return htmlElement;}
+};
+
+const titleEl = getEl('.title');
+console.log(getEl(".title"));
+
+const spanEl = getEl('.span');
+console.log(getEl(".span"));
+
+const noExist = getEl(".no-exist");
+
+const numberParagraph = getEl(".number-paragraph");
+console.log(numberParagraph.innerHTML);
+const trueNumber = Number(numberParagraph.textContent);
+console.log("Número convertido:", trueNumber);
+console.log(isEvenOdd(trueNumber));
