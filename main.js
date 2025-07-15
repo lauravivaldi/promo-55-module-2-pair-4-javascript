@@ -246,3 +246,113 @@ console.log(numberParagraph.innerHTML);
 const trueNumber = Number(numberParagraph.textContent);
 console.log("Número convertido:", trueNumber);
 console.log(isEvenOdd(trueNumber));
+
+//. Bio de Adalabers
+//Instrucciones:
+
+//Crea un objeto llamado adalaber1 con:
+
+//Nombre: 'Susana'
+//Edad: 34
+//Profesión: 'periodista'
+//Muestra esta frase en la consola o en la web usando las propiedades del objeto:
+//Copy
+//Mi nombre es Susana, tengo 34 años y soy periodista
+
+const adalaber1 = {
+    name: "Susana",
+    age: 34,
+    profesion: "periodista",
+};
+
+console.log(`Mi nombre es ${adalaber1.name}, tengo ${adalaber1.age} y soy ${adalaber1.profesion}`);
+
+//
+//Repite los pasos para crear adalaber2 con:
+
+//Nombre: 'Rocío'
+//Edad: 25
+//Profesión: 'actriz'
+
+const adalaber2 = {
+    name: "Rocio",
+    age: 25,
+    profesion: "actriz",
+};
+
+console.log(`Mi nombre es ${adalaber2.name}, tengo ${adalaber2.age} y soy ${adalaber2.profesion}`);
+
+//2. A la carrera
+
+//Partiendo del objeto adalaber1 del ejercicio anterior, añade un método (una función) run que 
+// muestre en la consola (lo llamamos loguear) la frase 'Estoy corriendo'.
+
+//Ahora, vamos a añadir un nuevo método runAMarathon que toma un parámetro distance que es un número.
+//  Al ejecutarlo, debe mostrarse en la consola el texto 'Estoy 
+//corriendo un maratón de 50 kilómetros' siendo 50 el valor del argumento distance que le hemos pasado.
+
+adalaber1.run = () => {console.log("Estoy corriendo")};
+
+adalaber1.run();
+
+adalaber1.runAMarathon = {distance: 50};
+console.log(`Estoy corriendo un maratón de ${adalaber1.runAMarathon.distance} kilómetros`);
+
+
+//Partiendo del objeto adalaber1 del ejercicio anterior, añade un método (una función) showBio que
+//  muestra en la consola la frase 'Mi nombre es María, tengo 34 años y soy periodista', usando el 
+// nombre, edad y estudios que están almacenados en el objeto.
+
+//Hacemos lo mismo para adalaber2. ¿Hemos tenido que modificar mucho el método showBio? 
+// ¿Ves alguna ventaja respecto a cómo hacíamos lo mismo en el ejercicio 1?
+
+adalaber1.showBio = () => {
+console.log(`Mi nombre es ${adalaber1.name}, tengo ${adalaber1.age}, y soy ${adalaber1.profesion}`)};
+
+adalaber1.showBio();
+
+adalaber2.showBio = () => {
+console.log(`Mi nombre es ${adalaber2.name}, tengo ${adalaber2.age}, y soy ${adalaber2.profesion}`)};
+
+adalaber2.showBio();
+
+
+// Estructura de datos para un usuario
+
+//Crea un objeto para almacenar la información de un usuario y una constante llamada job donde 
+// guardaremos el valor 'developer'.
+//  A continuación sigue los siguiente pasos:
+//Usando la notación con punto o la notación con corchetes ([]) (ej: obj.prop o obj["prop"]):
+//Añades una propiedad llamada firstName y dale un valor.
+//Añade una propiedad llamada lastName y le dale un valor.
+//Añade una propiedad llamada age y le dale un valor numérico.
+//Añade una propiedad job a la que dale el valor de la constante job.
+//Comprueba que al obtener el valor de cada una de las propiedades que hemos definido hasta ahora, 
+// este es correcto.
+//Cambia el nombre del usuario por otro distinto.
+//Aumenta en 1 la edad del usuario.
+//Comprueba de nuevo que todo sigue funcionando correctamente.
+
+const job = "developer";
+
+const userName = {
+  
+};
+
+userName.firstName = "María";
+userName.lastName = "Perez";
+userName.age = 54;
+
+
+userName.job = `${job}`;
+console.log(userName);
+
+userName.firstName = "Ana";
+userName.age = ++userName.age;
+
+console.log(userName);
+
+
+
+
+
