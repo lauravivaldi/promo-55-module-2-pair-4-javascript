@@ -47,7 +47,7 @@ formButton.addEventListener("click", (event) => {
     form.appendChild(helloText);
 });
 
-// ejercicios condicionales
+// ejercicio condicionales 1
 
 const inputName = document.querySelector(".input-name").value;
 
@@ -58,6 +58,7 @@ else {
     console.log("Lo siento, pero el usuario que has introducido no está registrado")
 };
 
+// ejercicio condicionales 2
 
 function findNumber() {
     const number = document.querySelector(".number").value; 
@@ -72,10 +73,68 @@ function findNumber() {
     } else {
     console.log('el número no es 123123125')
     }
-}
+};
 
 const buttonNumber = document.querySelector(".button-number");
 buttonNumber.onclick = findNumber;
+
+//ejercicio condicionales 3
+
+const defaultAvatar = "http://placehold.jp/150x150.png";
+let userAvatar = "http://www.fillmurray.com/300/300";
+const userAvatarImage = document.querySelector(".user__avatar");
+
+if (userAvatar !== "") {
+    userAvatarImage.src = userAvatar;
+} else {
+    userAvatarImage.src = defaultAvatar;
+};
+
+//Ejercicio condicionales 4
+
+let dogAge = 4;
+let humanAge = "";
+
+dogAge = 6;
+
+if (dogAge === 1) {
+    humanAge = 15;
+} else if (dogAge === 2) {
+    humanAge = 15 + 9;
+} else {
+    humanAge = 15 + 9 + (dogAge - 2) * 5;
+};
+
+console.log(humanAge);
+
+//Ejercicio condicionales 5
+
+let ingredient = '';
+
+if (ingredient === 'pollo') {
+    console.log("Puedes hacerte un filete con patatas");
+} else if (ingredient === 'merluza') {
+    console.log("Puedes hacerte una merlucita en salsa verde");
+} else if (ingredient === 'espinacas') {
+    console.log("Puedes hacerte espinacas rehogadas");
+} else {
+    console.log("No hay nada en la nevera");
+};
+
+//Ejercicio condicionales 6
+
+const thisYear = 2030;
+let nextLeapYear;
+
+if (thisYear % 4 === 0) {
+    nextLeapYear = thisYear + 4;
+} else {
+    const rest = thisYear % 4;
+    nextLeapYear = thisYear + (4 - rest);
+};
+
+console.log("El siguiente año bisiesto es:", nextLeapYear);
+
 
 //Ejercicios tipos de datos
 
@@ -352,7 +411,23 @@ userName.age = ++userName.age;
 
 console.log(userName);
 
+//ejercicio arrays
 
+const movies = ["Indiana Jones", "Titanic", "Tacones lejanos"];
+// movies[3] = "Harry Potter";
+// console.log(movies);
+
+// movies[0] = "El cuervo";
+// console.log(movies);
+
+const workWithMovies = () => {
+    movies[3] = "Harry Potter";
+    console.log(movies);
+    movies[0] = "El cuervo";
+    console.log(movies);
+};
+
+workWithMovies();
 
 
 
