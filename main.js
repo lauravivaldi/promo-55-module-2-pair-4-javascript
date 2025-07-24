@@ -471,3 +471,110 @@ console.log(numbers);
 
 console.log("El resultado de la media es " + acc1/6);
 
+
+//Ejercicios METODOS (PDF)
+
+const marks = [5, 4, 6, 7, 9];
+
+const inflatedMarks = marks.map((mark) => {
+    return mark +1
+});
+
+console.log(inflatedMarks);
+
+
+const names = ['María', 'Lucía', 'Susana', 'Rocío', 
+'Inmaculada'];
+
+const welcomenames = names.map((name) => {
+    return "Bienvenida " + name;
+});
+
+console.log(welcomenames);
+
+const users = [ 
+ { name: "María", isPremium: false }, 
+ { name: "Lucía", isPremium: true }, 
+ { name: "Susana", isPremium: true }, 
+ { name: "Rocío", isPremium: false }, 
+ { name: "Inmaculada", isPremium: false }, 
+];
+
+
+
+const welcomeusers = users.map((user) => {if(user.isPremium === true) {
+    return "Bienvenida " + user.name + " .Gracias por confiar en nosotros";
+}else { 
+    return "Bienvenida " + user.name;
+}});
+ 
+console.log(welcomeusers);
+
+const premiumUsers = users.filter((user) => {
+    return user.isPremium === true;
+
+});
+
+console.log(premiumUsers);
+
+
+const pins = [2389, 2384, 2837, 5232, 8998]; 
+
+const evenPins = pins.filter((pin) => {
+     return pin % 2 === 0;
+});
+
+console.log(evenPins);
+
+const usersWithPin = [ 
+ { name: "María", isPremium: false, pin: 2389 }, 
+ { name: "Lucía", isPremium: true, pin: 2384 }, 
+ { name: "Susana", isPremium: true, pin: 2837 }, 
+ { name: "Rocío", isPremium: false, pin: 5232 }, 
+ { name: "Inmaculada", isPremium: false, pin: 8998 },];
+
+ const usersWithAccess = usersWithPin.filter((user) => {
+    return user.pin % 2 === 0;
+ });
+
+ console.log(usersWithAccess);
+
+ const incidence = usersWithPin.find((user) => {
+    return user.pin === 5232;
+
+ });
+
+ console.log(incidence);
+
+ const deleteUser = usersWithPin.findIndex((user) => {
+    return user.pin === 5232;
+ });
+
+ console.log(deleteUser);
+
+ const eraseUser = usersWithPin.splice(3, 1);
+
+ console.log(eraseUser);
+ console.log(usersWithPin);
+
+
+//METODO localCompare - para ordenar por orden alfabético.
+
+ const usersByName = usersWithPin.sort((a, b) => a.name.localeCompare(b.name));
+
+ console.log(usersByName);
+
+ const usersByPin = usersWithPin.sort((a, b) => a.pin - b.pin);
+
+console.log(usersByPin);
+
+
+
+
+
+
+
+
+
+ 
+ 
