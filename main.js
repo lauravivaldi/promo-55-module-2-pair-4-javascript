@@ -568,6 +568,87 @@ const usersWithPin = [
 
 console.log(usersByPin);
 
+// ejercicios peticiones al servidor
+
+const randomNumber = document.querySelector(".random-number");
+
+fetch ('https://api.rand.fun/number/integer')
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data);
+        randomNumber.innerHTML = data.result;
+    });
+
+const chihuahuaButton = document.querySelector(".chihuahua-button");
+const chihuahuaImage = document.querySelector(".chihuahua-image");
+
+fetch ('https://dog.ceo/api/breed/chihuahua/images/random')
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data);
+        chihuahuaImage.src = data.message;
+    });
+
+// const getChihuahua = () => {
+//     fetch ('https://dog.ceo/api/breed/chihuahua/images/random')
+//     .then((response) => {
+//         return response.json()
+//     })
+//     .then((data) => {
+//         console.log(data);
+//         chihuahuaImage.src = data.message;
+//     });
+// };
+
+// chihuahuaButton.addEventListener("click", getChihuahua);
+
+
+const createPromise = () =>
+  fetch('https://dog.ceo/api/breed/chihuahua/images/random')
+    .then((response) => {
+    return response.json()
+  });
+
+const getChihuahuaImages = () => {
+  const promises = [createPromise(), createPromise()];
+  Promise.all(promises).then((responses) => {
+    for (let i = 0; i < responses.length; i++) {
+      chihuahuaImage + (i + 1);
+      chihuahuaImage.src = responses[i].message;
+    }
+  });
+};
+
+chihuahuaButton.addEventListener('click', getChihuahuaImages);
+
+
+
+
+const buttonGitHub = document.querySelector(".button-github");
+const userGitHub = document.querySelector(".user-github");
+const repositoryGitHub = document.querySelector(".repository-github");
+const avatarGitHub = document.querySelector(".avatar-github");
+
+const getGitHubInfo = () => {
+    const username = document.querySelector(".input-github").value;
+    fetch(`https://api.github.com/users/${username}`)
+    .then((response) => {
+        return response.json()
+    })
+    .then((data) => {
+        console.log(data);
+        userGitHub.innerHTML = `${data.name || data.login}`;
+        repositoryGitHub.innerHTML = `Repositorios públicos: ${data.public_repos}`;
+        avatarGitHub.src = `${data.avatar_url}`;
+    });
+};
+
+buttonGitHub.addEventListener("click", getGitHubInfo);
+
 
 
 
