@@ -650,7 +650,66 @@ const getGitHubInfo = () => {
 buttonGitHub.addEventListener("click", getGitHubInfo);
 
 
+//Ejercicios DOM AVANZADO
 
+
+const numbersDom = [1, 2, 3];
+
+const numberList = document.querySelector(".numberList");
+
+
+numbersDom.forEach((number)=>{
+   const newElement = document.createElement ("li");
+   const newContent = document.createTextNode (number);
+   newElement.appendChild(newContent);
+   numberList.appendChild(newElement);
+   console.log(numberList);
+});
+
+
+
+//Ejercicio 2
+
+const cities = {
+    'Madrid': ['https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Gran_V%C3%ADa_%28Madrid%29_1.jpg/800px-Gran_V%C3%ADa_%28Madrid%29_1.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Palacio_de_Cibeles_%28Madrid%29_01.jpg/800px-Palacio_de_Cibeles_%28Madrid%29_01.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Plaza_Mayor_de_Madrid_06.jpg/800px-Plaza_Mayor_de_Madrid_06.jpg'];
+    
+    'paris': [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Tour_Eiffel_Wikimedia_Commons.jpg/800px-Tour_Eiffel_Wikimedia_Commons.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Cath%C3%A9drale_Notre-Dame_de_Paris_2013-07-24.jpg/800px-Cath%C3%A9drale_Notre-Dame_de_Paris_2013-07-24.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/Arc_de_Triomphe%2C_Paris_21_October_2010.jpg/800px-Arc_de_Triomphe%2C_Paris_21_October_2010.jpg'
+      ],
+    'nueva-york': [
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Manhattan_skyline_from_Weehawken%2C_NJ.jpg/800px-Manhattan_skyline_from_Weehawken%2C_NJ.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Statue_of_Liberty%2C_NY.jpg/800px-Statue_of_Liberty%2C_NY.jpg',
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Central_Park_New_York_City_New_York_23.jpg/800px-Central_Park_New_York_City_New_York_23.jpg'
+      ]
+    };  
+
+const selectImage = () =>{
+    const inputCities = document.querySelector(".input-cities").value;
+    const imgCities = document.querySelector(".img-cities");
+
+    if (inputCities === "Madrid") {
+        cities.forEach() => { 
+            const imagecity = document.createElement("img");
+             
+
+        }
+    }
+
+
+}  
+
+
+
+
+
+
+
+const imageCities = document.createElement("img");
+ 
 
 
 
